@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../views/partials/heading.ejs") %>
+  </head>
+
+  <body>
+    <%- include("../views/partials/nav.ejs") %>
+
+    <!-- main header  -->
+    <div class="main_header">
+      <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+          <div class="row">
+            <div class="col-md-6 col-12 main_header_right">
+              <figure>
+                <img
+                  src="images/my.png"
+                  alt="my"
+                  title="My pic "
+                  class="img-fluid"
+                />
+              </figure>
+            </div>
+
+            <div class="col-md-6 col-12 main_header_left">
+              <p>Hi , Welcome to my site!</p>
+              <h1>
+                I am <span class="txt_clr">Kartikey Dubey😉</span>, Mern Stack
+                Developer
+              </h1>
+              <a
+                href="https://www.linkedin.com/in/kartikeydubey02/"
+                target="_blank"
+                ><button>About Me</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+
+    <footer><%- include("../views/partials/footer.ejs") %></footer>
+  </body>
+</html>

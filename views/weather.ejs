@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../views/partials/heading.ejs") %>
+  </head>
+
+  <body>
+    <%- include("../views/partials/nav.ejs") %>
+    <!-- main header  -->
+    <div class="main_header">
+      <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+          <div class="container-fluid main_content">
+            <form class="temp_form">
+              <input
+                type="text"
+                id="cityName"
+                placeholder="Enter city name.."
+                autocomplete="off"
+              />
+              <br />
+              <input type="submit" value="search" id="submitBtn" />
+              <p id="temp_err"></p>
+            </form>
+
+            <div class="tempInformation">
+              <div class="top_layer">
+                <h3 id="day" style="color: antiquewhite"></h3>
+                <!-- <h3 id="today_date" style="color: antiquewhite">
+                  <% const date = new Date(); %> <%= date.getDate() %> <%= "/"
+                  %> <%= (date.getMonth()+1) %> <%= "/" %> <%=
+                  date.getFullYear()%>
+                </h3> -->
+              </div>
+              <div class="main_layer">
+                <p id="city_name">Get Weather Report here...</p>
+                <div class="middle_layer data_hide">
+                  <p id="temp">
+                    <span id="temp_real_val">0</span><sup>o</sup>C
+                  </p>
+                  <p id="temp_status">
+                    <i class="fa fa-cloud" aria-hidden="true"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+
+    <footer><%- include("../views/partials/footer.ejs") %></footer>
+
+    <script src="js/app.js"></script>
+    <script>
+      const date1 = new Date();
+      const n = date1.getDay();
+      if (n === 0) {
+        document.getElementById("day").innerHTML = "Sunday";
+      } else if (n === 1) {
+        document.getElementById("day").innerHTML = "Monday";
+      } else if (n === 2) {
+        document.getElementById("day").innerHTML = "Tuesday";
+      } else if (n === 3) {
+        document.getElementById("day").innerHTML = "Wednesday";
+      } else if (n === 4) {
+        document.getElementById("day").innerHTML = "Thursday";
+      } else if (n === 5) {
+        document.getElementById("day").innerHTML = "Friday";
+      } else {
+        document.getElementById("day").innerHTML = "Saturday";
+      }
+    </script>
+  </body>
+</html>
