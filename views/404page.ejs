@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../views/partials/heading.ejs") %>
+ 
+  </head>
+
+  <body>
+    <%- include("../views/partials/nav.ejs") %>
+
+    <!-- main header  -->
+    <div class="main_header">
+
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto ">
+                <div class=" main_header_left align-items-center">
+                    <figure class="errimg">
+                        <img src="images/err.png" alt="Error" title="Error-404" class="img-fluid">
+                    </figure>
+                    <p>Welcome to Weather Report!</p>
+                    <h1><%=errorMsg%></h1>
+                    <a href="/"><button>Go Back</button></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+
+    <!-- footer -->
+
+    <footer>
+        <p>
+            <%- include("../views/partials/footer.ejs") %>
+        </p>
+    </footer>
+</body>
+
+</html>
